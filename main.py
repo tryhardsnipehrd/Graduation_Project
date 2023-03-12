@@ -59,7 +59,7 @@ class MainWindow:
 
         # Description text
         self.__description_text_1 = ttk.Label(
-            text="Please leave a message above for Holden!"
+            text="Please leave a message above for TryHard!"
         )
         self.__description_text_2 = ttk.Label(text="Steps")
         self.__description_text_3 = ttk.Label(
@@ -108,11 +108,11 @@ class MainWindow:
         try:
             self.__result = self.__cursor.execute(
                 """
-                                                  CREATE TABLE IF NOT EXISTS grad_book(id INTEGER PRIMARY KEY,
-                                                                        name STRING,
-                                                                        message STRING,
-                                                                        address STRING)
-                                                  """
+                CREATE TABLE IF NOT EXISTS grad_book(id INTEGER PRIMARY KEY,
+                                                    name STRING,
+                                                    message STRING,
+                                                    address STRING)
+                """
             )
         except sqlite3.OperationalError:
             print("Table already created")
